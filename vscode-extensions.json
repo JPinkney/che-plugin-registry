@@ -8,7 +8,7 @@
         "source": {
           "repository": "https://github.com/che-dockerfiles/che-sidecar-shellcheck"
         }
-      }      
+      }
     },
     {
       "repository": "https://bitbucket.org/atlassianlabs/atlascode",
@@ -161,11 +161,11 @@
       "revision": "v3.15.0-che",
       "sidecar": {
         "image": "quay.io/eclipse/che-sidecar-dart:2.10-a2959e6",
-	"source": {
-	  "repository": "https://github.com/che-dockerfiles/che-sidecar-dart"
-	}
-      }	
-    },     
+        "source": {
+          "repository": "https://github.com/che-dockerfiles/che-sidecar-dart"
+        }
+      }
+    },
     {
       "repository": "https://github.com/golang/vscode-go",
       "revision": "v0.16.1",
@@ -330,7 +330,7 @@
     },
     {
       "repository": "https://github.com/redhat-developer/vscode-yaml",
-      "revision": "0.8.0",
+      "revision": "0.0.1",
       "sidecar": {
         "image": "quay.io/eclipse/che-sidecar-node:12-026416c",
         "source": {
