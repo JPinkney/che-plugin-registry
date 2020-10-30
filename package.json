@@ -13,8 +13,8 @@
         "fs-extra": "^9.0.1",
         "glob": "^7.1.6",
         "js-yaml": "^3.14.0"
-      },
-      "devDependencies": {
+    },
+    "devDependencies": {
         "@types/fs-extra": "^9.0.1",
         "@types/jest": "^25.2.2",
         "@types/semver": "^7.3.1",
@@ -35,9 +35,13 @@
         "tslint": "^6.1.2",
         "typescript": "^3.9.0",
         "vuepress": "^1.5.2"
-      },
+    },
     "resolutions": {
         "node-forge": "0.10.0"
     },
-    "workspaces": ["tools/pr-check", "tools/automation"]
+    "workspaces": [
+        "tools/pr-check",
+        "tools/automation",
+        "tools/vscode-extension-updater"
+    ]
 }
