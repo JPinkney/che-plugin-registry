@@ -1,0 +1,24 @@
+name: 'build-test'
+on:
+  schedule:
+    - cron: '*/5 * * * *'
+
+jobs:
+  test: # make sure the action works on a clean machine without building
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: '12'
+      - name: wget
+        uses: wei/wget@v1
+        with:
+          args: https://raw.githubusercontent.com/JPinkney/che-plugin-nightly-updater/master/dist/index.js
+      - name: Update vscode-extensions.json
+        run: |
+          node index.js ${{ secrets.GITHUB_TOKEN }}
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git commit -m "Update vscode-extensions.json" -a
+          git push origin master
